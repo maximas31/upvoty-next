@@ -1,7 +1,7 @@
 {
   "name": "@upvoty/next",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Embed the Upvoty widget in your Next.js App",
   "author": "upvoty",
   "license": "MIT",
@@ -19,8 +19,8 @@
     "pre-commit": "npx pretty-quick --staged"
   },
   "scripts": {
-    "prepare": "npm run build",
-    "build": "microbundle",
+    "prepare": "npm run build --jsx 'React.createElement' --jsxImportSource",
+    "build": "microbundle --jsx 'React.createElement' --jsxImportSource react --globals react/jsx-runtime=jsx",
     "dev": "microbundle watch"
   },
   "devDependencies": {

@@ -17,7 +17,7 @@ const Upvoty: React.FC<UpvotyProps> = ({ projectId, lang }) => {
       src={`https://app.upvoty.com/embed.js?id=${projectId}`}
       strategy="afterInteractive"
       lang={lang}
-    />
+    /> as any
   );
 };
 
